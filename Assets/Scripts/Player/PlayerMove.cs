@@ -9,6 +9,7 @@ public class PlayerMove : MonoBehaviour
     [SerializeField] private float speed;
     [SerializeField] private TextMeshProUGUI _textMeshProUGUI;
     [SerializeField] private TextMeshProUGUI _textMeshProUGUI2;
+    [SerializeField] private candyfall cf;
 
     
     private Vector2 moveDir;
@@ -41,6 +42,7 @@ public class PlayerMove : MonoBehaviour
         {
             _textMeshProUGUI2.text = "Candy Craze"; 
         }
+        cf.setEnd(_score);
         
     }
 

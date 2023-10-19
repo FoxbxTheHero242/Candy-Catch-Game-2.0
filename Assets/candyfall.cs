@@ -9,7 +9,6 @@ public class candyfall : MonoBehaviour
 {
     [SerializeField] private GameObject[] candies;
     [SerializeField] private int[] chances;
-    [SerializeField] private PlayerMove _playerMove;
     [SerializeField] private TextMeshProUGUI _textMeshProUGUI;
     [SerializeField] private GameObject canvas2;
     
@@ -48,12 +47,17 @@ public class candyfall : MonoBehaviour
             candyAmmount++;
         }
 
+       
+        
+    }
+
+    public void setEnd(int score)
+    {
         if (candyAmmount==15&& transform.childCount==0)
         {
             
-            _textMeshProUGUI.text = "your final score is: "+ _playerMove.GetScore().ToString();
+            _textMeshProUGUI.text = "your final score is: "+ score.ToString();
             canvas2.SetActive(true);
         }
-        
     }
 }
